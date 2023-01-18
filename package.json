@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@sanity/incompatible-plugin": "^1.0.4",
+    "@sanity/ui": "^1.0.14",
     "react-icons": "^4.7.1"
   },
   "devDependencies": {

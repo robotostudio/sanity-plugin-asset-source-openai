@@ -67,14 +67,10 @@ export default function ImagePlugin(props: AssetSourceComponentProps & {API_KEY:
         onClose={handleClose}
         open
         width={4}
-        onResize={undefined}
-        onResizeCapture={undefined}
       >
         <Stack padding={4}>
-          <Flex direction={'column'} gap={2} onResize={undefined} onResizeCapture={undefined}>
-            <Label onResize={undefined} onResizeCapture={undefined}>
-              Enter Prompt Text
-            </Label>
+          <Flex direction={'column'} gap={2}>
+            <Label>Enter Prompt Text</Label>
             <TextInput
               placeholder="Cats Driving Boat"
               value={prompt}
@@ -86,24 +82,16 @@ export default function ImagePlugin(props: AssetSourceComponentProps & {API_KEY:
           <Stack padding={2} />
 
           {loading && (
-            <Flex justify="center" onResize={undefined} onResizeCapture={undefined}>
-              <Spinner size={3} muted onResize={undefined} onResizeCapture={undefined} />
+            <Flex justify="center">
+              <Spinner size={3} muted />
             </Flex>
           )}
           {img && <img src={img} alt={prompt} width={512} height={512} />}
           <Stack padding={2} />
 
-          <Flex gap={4} onResize={undefined} onResizeCapture={undefined}>
-            {!loading && (
-              <Button onClick={generateImage} onResize={undefined} onResizeCapture={undefined}>
-                Generate
-              </Button>
-            )}
-            {img && (
-              <Button onClick={oonfirmImage} onResize={undefined} onResizeCapture={undefined}>
-                Confirm
-              </Button>
-            )}
+          <Flex gap={4}>
+            {!loading && <Button onClick={generateImage}>Generate</Button>}
+            {img && <Button onClick={oonfirmImage}>Confirm</Button>}
           </Flex>
         </Stack>
       </Dialog>

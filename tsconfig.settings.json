@@ -3,7 +3,6 @@
     "moduleResolution": "node",
     "target": "esnext",
     "module": "esnext",
-    "baseUrl": "./src",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "esModuleInterop": true,
     "strict": true,

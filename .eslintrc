@@ -6,7 +6,7 @@
   },
   "rules": {
     "react/jsx-no-bind": [
-      true,
+      1,
       {
         "allowFunctions": true
       }

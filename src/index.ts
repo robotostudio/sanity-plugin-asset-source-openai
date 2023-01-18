@@ -1,35 +1,9 @@
-/* eslint-disable no-console */
-import ImagePlugin from 'components/OpenAIAssetSource'
 import {definePlugin} from 'sanity'
+import {getPlugin} from './components/AssetSource'
 
 interface OpenaiImageAssetConfig {
-  /* nothing here yet */
   API_KEY: string
 }
-
-// import {SiOpenai} from 'react-icons/si'
-// import {definePlugin} from 'sanity'
-// import ImagePlugin from '../../components/ImagePlugin'
-
-// export const openAIImagePlugin = definePlugin<{API_KEY: string}>(({API_KEY}) => {
-//   return {
-//     name: 'Open AI Image',
-//     form: {
-//       image: {
-//         assetSources: (prev) => {
-//           const HOC = (arg: any) => <ImagePlugin {...arg} api_key={API_KEY} />
-//           const OpenAIImagePlugin = {
-//             name: 'openAI',
-//             title: 'Open AI Image',
-//             component: HOC,
-//             icon: SiOpenai,
-//           }
-//           return [...prev, OpenAIImagePlugin]
-//         },
-//       },
-//     },
-//   }
-// })
 
 /**
  * Usage in `sanity.config.ts` (or .js)
@@ -44,19 +18,14 @@ interface OpenaiImageAssetConfig {
  * })
  * ```
  */
-const OpenAIImagePlugin = {
-  name: 'openAI',
-  title: 'Open AI Image',
-  component: ImagePlugin,
-}
 
 export const openaiImageAsset = definePlugin<OpenaiImageAssetConfig>(({API_KEY}) => {
-  console.log('updated')
   return {
     name: 'Open AI Image',
     form: {
       image: {
         assetSources: (prev) => {
+          const OpenAIImagePlugin = getPlugin(API_KEY)
           return [...prev, OpenAIImagePlugin]
         },
       },

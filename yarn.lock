@@ -1765,7 +1765,7 @@
     "@sanity/client" "^4.0.1"
     "@types/react" "^18.0.25"
 
-"@sanity/ui@^1.0.0":
+"@sanity/ui@^1.0.0", "@sanity/ui@^1.0.14":
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/@sanity/ui/-/ui-1.0.14.tgz#3f5773fc7668ad73a5a44781659c4be3b4e53215"
   integrity sha512-+f/hOk9PMz9Vnd3G2yrfCXrYsJKai+BmHHQfquv+5ZPNsdZgQlQuDZ5h2qAEaEtJgg5YdPcMMaowyybVLWMMNQ==
