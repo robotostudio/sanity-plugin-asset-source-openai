@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-asset-source-openai",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "generate images using Dall-e openai in your Sanity Studio",
   "keywords": [
     "sanity",
@@ -35,7 +35,8 @@
     "link-watch": "plugin-kit link-watch",
     "lint": "eslint .",
     "prepublishOnly": "run-s build",
-    "watch": "pkg-utils watch --strict"
+    "watch": "pkg-utils watch --strict",
+    "release": "standard-version"
   },
   "dependencies": {
     "@sanity/incompatible-plugin": "^1.0.4",
@@ -62,6 +63,7 @@
     "react-is": "^18.2.0",
     "rimraf": "^4.1.1",
     "sanity": "^3.2.4",
+    "standard-version": "^9.5.0",
     "styled-components": "^5.3.6",
     "typescript": "^4.9.4"
   },
