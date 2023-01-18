@@ -14,11 +14,10 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from 'sanity-plugin-asset-source-openai'
-
+import {openaiImageAsset} from 'sanity-plugin-asset-source-openai'
 export default defineConfig({
-  //...
-  plugins: [myPlugin({})],
+  // ...
+  plugins: [openaiImageAsset()],
 })
 ```
 
