@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-asset-source-openai",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "generate images using Dall-e openai in your Sanity Studio",
   "keywords": [
     "sanity",
@@ -36,7 +36,8 @@
     "lint": "eslint .",
     "prepublishOnly": "run-s build",
     "watch": "pkg-utils watch --strict",
-    "release": "standard-version"
+    "release": "standard-version && yarn run publish-pkg",
+    "publish-pkg": "git push --follow-tags origin main && npm publish ----registry=https://registry.npmjs.org/"
   },
   "dependencies": {
     "@sanity/incompatible-plugin": "^1.0.4",
