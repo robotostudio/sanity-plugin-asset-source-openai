@@ -17,7 +17,9 @@ import {defineConfig} from 'sanity'
 import {openaiImageAsset} from 'sanity-plugin-asset-source-openai'
 export default defineConfig({
   // ...
-  plugins: [openaiImageAsset()],
+  plugins: [openaiImageAsset({
+      API_KEY:"your_api_key_from_openai"
+    })],
 })
 ```
 
