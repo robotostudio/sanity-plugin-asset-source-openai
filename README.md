@@ -21,6 +21,9 @@ export default defineConfig({
 })
 ```
 
+## Tutorial
+https://www.loom.com/share/267fed477cf4458394eb2c2e4c964efc
+
 ## License
 
 [MIT](LICENSE) © Hrithik Prasad
